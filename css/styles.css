@@ -28,6 +28,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .section {
@@ -35,10 +37,6 @@ img {
   padding-bottom: 120px;
 }
 
-.section-link-team {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
 .container {
   max-width: 320px;
   padding-left: 16px;
@@ -183,7 +181,7 @@ img {
   background-color: #404bbf;
 }
 /*section2*/
-.section-link {
+.section-link-advantages {
   padding-top: 96px;
   padding-bottom: 96px;
 }
@@ -201,15 +199,12 @@ img {
 }
 .our-icon {
   display: none;
-} 
+}
 
 .section-strategy {
-  /*font-size: 20px;*/
   font-size: 36px;
   font-weight: 700;
-  /*font-weight: 500;*/
   line-height: 1.11;
-  /*line-height: 1.2;*/
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
@@ -234,12 +229,14 @@ img {
 .advantages-list-item {
   width: 100%;
 }
-/*width: calc((100% - 72px) /  4);/*
-
-
-
 
 /*Section3*/
+.section-link-team {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  /*padding-top: 120px;
+  padding-bottom: 120px;*/
+}
 .advantages-section-our {
   font-size: 36px;
   line-height: 1.11;
@@ -252,11 +249,16 @@ img {
 
 .our-link {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
+  /*display: flex;/*
+
+  /*gap: 24px;*/
 }
 
 .team-link {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
+  /*width: calc((100% - 72px) / 4);*/
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -316,6 +318,10 @@ img {
 
 /*section4*/
 
+.section-link-portfolio {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
 .advantages-section-portfolio {
   font-size: 36px;
   line-height: 1.11;
@@ -328,13 +334,12 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
-  padding-inline-start: 0px;
+  gap: 48px;
+ 
 }
 .portfolio-list-item {
   background-color: #ffffff;
-  width: calc((100% - 48px) / 3);
+  width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover {
@@ -751,6 +756,7 @@ img {
   .container {
     max-width: 768px;
   }
+ 
   .nav-bar {
     display: flex;
     gap: 40px;
@@ -761,13 +767,18 @@ img {
   .open-menu-btn {
     display: none;
   }
+  .section-link-advantages {
+    padding-top: 96px;
+    padding-bottom:96px;
+  }
   .advantages-list {
     display: flex;
     column-gap: 24px;
     row-gap: 72px;
+  }
+  .paragraf-section {
     
   }
-
   .advantages-list-item {
     width: calc((100% - 24px) / 2);
   }
@@ -775,37 +786,85 @@ img {
     text-transform: capitalize;
     text-align: left;
   }
+  .section-link-team {
+    padding-top: 53px;
+    padding-bottom: 30px;
+  }
+  .our-link {
+    gap: 64px;
+  }
+  .team-link {
+    width: calc((100% - 24px) / 2);
+  }
+
+.portfolio-list {
+  display: flex;
+  column-gap: 24px;
+  row-gap: 72px;
+}
+.portfolio-list-item {
+width: calc((100% - 24px) / 2);
 }
 
+}
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
   }
-  .section-link {
+  .section-link-advantages {
     padding-top: 120px;
     padding-bottom: 120px;
   }
   .our-icon {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 264px;
-     height: 112px;
-     background-color: #f4f4fd;
-     border-radius: 4px;
-     border: 1px solid #8e8f99;
-     margin-bottom: 8px;
-     gap: 24px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+    gap: 24px;
+  }
   .section-strategy {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
-
   }
-.advantages-list-item {
-  width: calc((100% - 72px) /  4);
-}
+  .advantages-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .advantages-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .section-link-team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .our-link {
+    display: flex;
+    gap: 24px;
+  }
+  .team-link {
+    width: calc((100% - 72px) / 4);
+  }
+  .section-link-portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+    padding-inline-start: 0px;
+  }
+  .portfolio-list-item {
+    width: calc((100% - 48px) / 3);
+  }
 }
