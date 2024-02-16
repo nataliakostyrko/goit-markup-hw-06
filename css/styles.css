@@ -55,6 +55,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .navigation-menu {
@@ -87,6 +88,7 @@ img {
   letter-spacing: 0.02em;
   padding: 24px 0;
   display: block;
+  position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation:hover,
@@ -119,6 +121,8 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  font-style: normal;
+  display: block;
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -135,9 +139,9 @@ img {
 }
 /*hero*/
 .hero-section {
-  max-width: 1440px;
-  margin: auto;
-  padding: 188px 0;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 72px 0;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -148,15 +152,21 @@ img {
   background-size: cover;
   background-position: center;
 }
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title-text {
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: #ffffff;
-  max-width: 496px;
+  max-width: 216px;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
 .button-section {
   background-color: #4d5ae5;
@@ -168,12 +178,12 @@ img {
   color: #ffffff;
   cursor: pointer;
   padding: 16px 32px;
-  display: block;
+  display: inline-block;
   border-radius: 4px;
   border: none;
   min-width: 169px;
   margin: 0 auto;
-  height: 56px;
+  min-height: 56px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-section:hover,
@@ -198,7 +208,17 @@ img {
   overflow: hidden;
 }
 .our-icon {
+  padding: 24px 100px;
+  border-radius: 4px;
+  border: 1px solid var(--LIGHT-SLATE, #8e8f99);
+  background: var(--CLOUD, #f4f4fd);
+  margin-bottom: 8px;
+  width: 264px;
+  height: 112px;
+  flex-shrink: 0;
   display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-strategy {
@@ -234,8 +254,6 @@ img {
 .section-link-team {
   padding-top: 96px;
   padding-bottom: 96px;
-  /*padding-top: 120px;
-  padding-bottom: 120px;*/
 }
 .advantages-section-our {
   font-size: 36px;
@@ -249,16 +267,13 @@ img {
 
 .our-link {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 72px;
-  /*display: flex;/*
-
-  /*gap: 24px;*/
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .team-link {
-  width: 100%;
-  /*width: calc((100% - 72px) / 4);*/
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -296,6 +311,7 @@ img {
 .icon-item {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
 }
 .icon-link {
   width: 100%;
@@ -317,11 +333,16 @@ img {
 }
 
 /*section4*/
-
-.section-link-portfolio {
+.section-link-advantages {
   padding-top: 96px;
   padding-bottom: 96px;
 }
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
 .advantages-section-portfolio {
   font-size: 36px;
   line-height: 1.11;
@@ -331,12 +352,7 @@ img {
   color: #2e2f42;
   margin-bottom: 72px;
 }
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 48px;
- 
-}
+
 .portfolio-list-item {
   background-color: #ffffff;
   width: 100%;
@@ -756,10 +772,26 @@ img {
   .container {
     max-width: 768px;
   }
- 
+  /*heider*/
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    height: 72px;
+  }
   .nav-bar {
     display: flex;
     gap: 40px;
+  }
+  .navigation-menu {
+    display: flex;
+    align-items: center;
+  }
+  .header-container .logo-nav-footer {
+    margin-right: 120px;
   }
   .header-address {
     display: block;
@@ -767,9 +799,24 @@ img {
   .open-menu-btn {
     display: none;
   }
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  /*hero*/
+  .hero-section {
+    padding: 112px 0;
+    max-width: 768px;
+  }
+  .title-text {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+  /*section2*/
   .section-link-advantages {
-    padding-top: 96px;
-    padding-bottom:96px;
   }
   .advantages-list {
     display: flex;
@@ -777,7 +824,6 @@ img {
     row-gap: 72px;
   }
   .paragraf-section {
-    
   }
   .advantages-list-item {
     width: calc((100% - 24px) / 2);
@@ -786,26 +832,28 @@ img {
     text-transform: capitalize;
     text-align: left;
   }
-  .section-link-team {
-    padding-top: 53px;
-    padding-bottom: 30px;
-  }
+  /*section3*/
   .our-link {
-    gap: 64px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 64px;
+    column-gap: 24px;
+    margin-left: 92px;
+    margin-right: 92px;
   }
   .team-link {
     width: calc((100% - 24px) / 2);
   }
-
-.portfolio-list {
-  display: flex;
-  column-gap: 24px;
-  row-gap: 72px;
-}
-.portfolio-list-item {
-width: calc((100% - 24px) / 2);
-}
-
+  /*section4*/
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .portfolio-list-item {
+    width: calc((100% - 24px) / 2);
+  }
 }
 @media screen and (min-width: 1158px) {
   .container {
@@ -813,6 +861,34 @@ width: calc((100% - 24px) / 2);
     padding-left: 15px;
     padding-right: 15px;
   }
+  /*header*/
+  .header-container .logo-nav-footer {
+    margin-right: 76px;
+  }
+  .header-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navigation-menu {
+    padding-right: 332px;
+  }
+  .contacts-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  /*section hero*/
+  .hero-section {
+    max-width: 1440px;
+    padding: 188px 0;
+  }
+  .title-text {
+    margin-bottom: 48px;
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+  }
+  /*section2*/
   .section-link-advantages {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -842,17 +918,21 @@ width: calc((100% - 24px) / 2);
   .advantages-list-item {
     width: calc((100% - 72px) / 4);
   }
+  /*section3*/
   .section-link-team {
     padding-top: 120px;
     padding-bottom: 120px;
   }
   .our-link {
-    display: flex;
+    flex-wrap: nowrap;
     gap: 24px;
+    margin-left: 0;
+    margin-right: 0;
   }
   .team-link {
     width: calc((100% - 72px) / 4);
   }
+  /*section4*/
   .section-link-portfolio {
     padding-top: 120px;
     padding-bottom: 120px;
